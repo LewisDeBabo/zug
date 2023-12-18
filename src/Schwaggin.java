@@ -22,7 +22,36 @@ public class Schwaggin {
         return anzahlRanzHocker;
     }
 
+    public boolean istPlatzFrei (){
+        if (!ranzHocker[numba].isresbird()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
+    public void reserve(int pNumba, String pFilthyPeasant){
+        if(!ranzHocker[pNumba].isresbird()){
+            ranzHocker[pNumba].setdaBirdDown(pFilthyPeasant);
+        }
+    }
+
+    public void birbfetusdeletus(){
+        ranzHocker[numba].birbfetusdeletus();
+    }
+
+    public int sagFreieranzHockerAnzahl(){
+        int MeddlLeude = 0;
+        for (Fiat500 seat : ranzHocker) {
+            if (!seat.isresbird()) MeddlLeude++;
+        }
+        return MeddlLeude;
+    }
+
+    public String sagZugLoseraufranzhocker(int pNumba){
+        return ranzHocker[numba].gibdaBirdfuer();
+    }
 
 
 
